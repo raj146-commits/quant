@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloindex"
+version = "0.1.0"
+description = "CLO equity returns index built from public SEC filings (Flat Rock-style methodology)"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "numpy", "requests", "lxml"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+cloindex = "cloindex.cli:main"
+
+[tool.setuptools]
+packages = ["cloindex"]
